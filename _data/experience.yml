@@ -1,0 +1,43 @@
+- layout: left
+  company: GrowerIQ
+  link: groweriq.com
+  job_title: Full Stack Software Developer
+  dates: January 2018 - December 2019
+  quote: >
+   Solving important business problems and leading hardware development
+  description: | # this will include new lines to allow paragraphs
+    Created a NativeScript application for Zebra Android devices
+    
+    Integrated industrial serial printers and scales
+    
+    Staged and deployed enterprise Android devices
+    
+    Developed CI routines using Docker
+- layout: left
+  company: Wilcompute Systems Group
+  link: wilcompute.com
+  job_title: Full Stack Software Developer
+  dates: February 2017 - December 2019
+  # quote: >
+  #  Solving important business problems and leading hardware development
+  description: | # this will include new lines to allow paragraphs
+    Product owner for multiple AngularJS applications
+    
+    Developed features for PHP backends
+    
+    Communicated with clients to develop new features
+- layout: left
+  company: KSDG
+  link: wilcompute.com
+  job_title: Full Stack Software Developer
+  dates: June 2016 - February 2017
+  # quote: >
+  #  Solving important business problems and leading hardware development
+  description: | # this will include new lines to allow paragraphs
+    Developed Web applications using HTML5, JavaScript, NodeJS and PHP
+    
+    Used Server-Sent Events and external APIs to create a live-updating seamless experience
+    
+    Deployed touchscreen television displays to provide end users an immersive shopping experience
+    
+    Creating HTML formatted emails designed for large audiences

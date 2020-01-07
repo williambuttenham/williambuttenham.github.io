@@ -1,0 +1,58 @@
+# Site
+repository: williambuttenham/williambuttenham.github.io
+favicon: images/favicon.ico
+
+# Personal info
+name: William Buttenham
+title: Full Stack Software Developer
+email: william.buttenham@gmail.com
+website: www.williambuttenham.com
+
+# Social links
+# twitter_username: jekyll
+github_username:  williambuttenham
+# dribbble_username: jekyll
+# facebook_username: jekyll
+# flickr_username: jekyll
+# instagram_username: jekyll
+linkedin_username: williambuttenham
+# pinterest_username: jekyll
+# youtube_username: jekyll
+
+# About Section
+# about_title: About Me
+about_profile_image: images/profile.jpg
+about_content: | # this will include new lines to allow paragraphs
+  Hi, my name's William and I'm a full stack software developer. As well as developing software I also have experience making hardware solutions. I have worked at a number of companies gaining teamwork and leadership skills.
+
+  I am most skilled in: <mark>Angular</mark> and <mark>Typescript</mark>
+
+# Projects Section
+# projects_title: Projects
+
+# Experience Section
+# experience_title: Experience
+
+# Education Section
+# educaton_title: Education
+
+# More Section
+# more_title: A Little More About Me
+more_content: | # this will include new lines to allow paragraphs
+  Alongside my interests in software development and hardware some of my other interests and hobbies are:
+   - Gaming
+   - Reading
+   - Making Keyboards
+
+# Footer
+footer_show_references: true
+
+# Build settings
+remote_theme: sproogen/resume-theme
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+ - jekyll-seo-tag
