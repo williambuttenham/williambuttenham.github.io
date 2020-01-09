@@ -21,7 +21,7 @@ linkedin_username: williambuttenham
 
 # About Section
 # about_title: About Me
-about_profile_image: images/profile.jpg
+# about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
   Hi, my name's William and I'm a full stack software developer. As well as developing software I also have experience making hardware solutions. I have worked at a number of companies gaining teamwork and leadership skills.
 
