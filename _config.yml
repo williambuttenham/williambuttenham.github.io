@@ -56,3 +56,5 @@ sass:
 
 plugins:
  - jekyll-seo-tag
+
+url: "http://williambuttenham.com"
