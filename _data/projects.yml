@@ -1,9 +1,7 @@
-# - layout: top-middle
-#   name: Super awesome project
-#   link: github.com/williambuttenham
-#   github: williambuttenham/williambuttenham.github.io
-  # quote: >
-    # This is probably one of the greatest apps ever created, if you don't agree you're probably wrong.
-  # description: | # this will include new lines to allow paragraphs
-  #   I started this project as a way if learning <mark>React</mark> and it has since grown into a fully fledged app. I have learned many skills through this and been I'm very proud of having this in my portfolio. If you don't have a project as awesome as this I would advise you make one.
-  
+- layout: top-middle
+  name: MIDI Piano controller
+  link: williambuttenham.com/midi-piano
+  quote: >
+    A MIDI controller designed for rough handling
+  description: | # this will include new lines to allow paragraphs
+    I made this project for my partners work in childcare. She has a classroom of toddlers and while they enjoy the musical toys they have, some of them are not robust enough for long term use. In addition most musical toys are limited to simpler instruments that translate well into a small toy. To make this controller robust I have used standard arcade buttons rated for ten million presses and the case will be constructed from 1/2 inch plywood. The controller is using the QMK firmware to easily implement NKRO and MIDI signals.
