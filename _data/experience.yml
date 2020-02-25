@@ -31,9 +31,13 @@
   description: | # this will include new lines to allow paragraphs
     Product owner for multiple AngularJS applications
     
-    Developed features for PHP backends
+    Developed features for PHP backends using MySQL databases
     
     Communicated with clients to develop new features
+    
+    Created developer documentation
+    
+    Updated and maintained a Jenkins build environment
 - layout: left
   company: KSDG
   link: ksdg.ca
