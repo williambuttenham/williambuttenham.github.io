@@ -6,13 +6,21 @@
   quote: >
    Solving important business problems and leading hardware development
   description: | # this will include new lines to allow paragraphs
-    Created a NativeScript application for Zebra Android devices
+    Created a NativeScript application for Zebra Android devices implementing pixel perfect design
+    
+    Developed an Angular 7+ Single Page Application
+    
+    Worked on RESTful API built with Python and Flask on a Postgres database
+    
+    Tested using Cypress and automated CI
     
     Integrated industrial serial printers and scales
     
     Staged and deployed enterprise Android devices
     
-    Developed CI routines using Docker
+    Worked in an Agile + Scrum environment
+    
+    Developed CI routines using Docker and Atlassian Pipelines
 - layout: left
   company: Wilcompute Systems Group
   link: wilcompute.com
