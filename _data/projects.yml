@@ -12,14 +12,14 @@
   quote: >
     My arcade cabinet built around a 14" CRT TV
   description: |
-  Powered by a Raspberry Pi running Lakka with QMK controls and 2.1 audio
+    Powered by a Raspberry Pi running Lakka with QMK controls and 2.1 audio
 
 - layout: top-middle
   name: Wanhao i3
   quote: >
     Coming soon: My upgrades package for a Wanhao i3
   description: |
-  Including an enclosure, OctoPi setup and frame modifications
+    Including an enclosure, OctoPi setup and frame modifications
 
 - layout: top-middle
   name: Foot Pedal
@@ -27,4 +27,4 @@
   quote: >
     A QMK footpedal with two stages
   description: |
-  Able tyo be used with both MIDI devices and as an extra convenient shortcut
+    Able tyo be used with both MIDI devices and as an extra convenient shortcut
