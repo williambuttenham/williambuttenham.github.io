@@ -23,9 +23,7 @@ linkedin_username: williambuttenham
 # about_title: About Me
 # about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
-  I have worked on projects for large corporations to small startups and many more in between. Using new technologies to create live and responsive web and mobile applications for use in sales, marketing and manufacturing.
-
-  I am most skilled in: <mark>Angular</mark> and <mark>NativeScript</mark>
+  I like to build electronic and software projects. This website is where I share them with you.
 
 # Projects Section
 # projects_title: Projects
