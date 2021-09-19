@@ -63,11 +63,11 @@ content:
 
       - layout: top-middle
         title: 3/5 Scale Arcade Cabinet
-        link: https://github.com/williambuttenham/qmk_firmware/tree/arcade-controller
+        link: https://github.com/williambuttenham/arcade-machine
         quote: >
           My arcade cabinet built around a 14" CRT TV
         description: |
-          Powered by a Raspberry Pi running Lakka with QMK controls and 2.1 audio
+          Powered by a Raspberry Pi running Lakka with QMK controls
 
       - layout: top-middle
         title: Wanhao i3
