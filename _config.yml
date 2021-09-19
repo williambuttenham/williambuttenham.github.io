@@ -70,11 +70,10 @@ content:
           Powered by a Raspberry Pi running Lakka with QMK controls
 
       - layout: top-middle
-        title: Wanhao i3
+        title: WiiScale IFTTT
+        link: https://github.com/williambuttenham/wiiscale-ifttt
         quote: >
-          Coming soon: My upgrades package for a Wanhao i3
-        description: |
-          Including an enclosure, OctoPi setup and frame modifications
+          A simple app to translate JSON between an old Mac app and IFTTT
 
       - layout: top-middle
         title: Foot Pedal
