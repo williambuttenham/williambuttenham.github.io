@@ -1,5 +1,5 @@
 baseURL = "http://localhost"
-copyright = "Copyright © 2021"
+copyright = "Copyright © 2022"
 title = "William Buttenham"
 #paginate = 10
 enableRobotsTXT = true
@@ -25,10 +25,10 @@ enableRobotsTXT = true
   #themeContrast = "medium"
   author = "William Buttenham"
   #subtitle = "Theme Demo"
-  description = "A retro-looking Hugo theme inspired by gruvbox. The pastel colors are high contrast, easily distinguishable, pleasing to the eye, and feature light and dark color palettes."
+  description = "I like to build electronic and software projects. This website is where I share them with you."
 
   [params.logo]
-    text = "gruvbox"
+    text = "Home"
     url = "/"
 
   [params.prism]
@@ -118,21 +118,21 @@ enableRobotsTXT = true
     name = "Blog"
     url = "/blog"
     weight = 10
-  [[menu.main]]
-    identifier = "projects"
-    name = "Projects"
-    url = "/projects"
-    weight = 20
+  # [[menu.main]]
+  #   identifier = "projects"
+  #   name = "Projects"
+  #   url = "/projects"
+  #   weight = 20
   [[menu.main]]
     identifier = "cv"
     name = "CV"
     url = "/cv"
     weight = 30
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about"
-    weight = 40
+  # [[menu.main]]
+  #   identifier = "about"
+  #   name = "About"
+  #   url = "/about"
+  #   weight = 40
 
 [languages]
   [languages.en]
@@ -140,8 +140,3 @@ enableRobotsTXT = true
     weight = 10
     [languages.en.params.jsonResume]
       present = "present"
-  [languages.de]
-    languageName = "Deutsch"
-    weight = 20
-    [languages.de.params.jsonResume]
-      present = "heute"
