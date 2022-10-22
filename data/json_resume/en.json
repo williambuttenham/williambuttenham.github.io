@@ -3,7 +3,7 @@
   "basics": {
     "name": "William Buttenham",
     "label": "Software Developer",
-    "image": "william-buttenham.webp",
+    "image": "https://williambuttenham.com/william-buttenham.webp",
     "email": "info@williambuttenham.com",
     "summary": "Software by day, hardware by night. I am aiming to share my projects as part blog/part project motivation",
     "location": {
