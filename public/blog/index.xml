@@ -1,1 +1,47 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blogs on William Buttenham</title><link>https://www.williambuttenham.com/blog/</link><description>Recent content in Blogs on William Buttenham</description><generator>Hugo -- gohugo.io</generator><copyright>Copyright © 2022</copyright><lastBuildDate>Sun, 19 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.williambuttenham.com/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>WiiScale IFTTT</title><link>https://www.williambuttenham.com/blog/wiiscale-ifttt/</link><pubDate>Sun, 19 Sep 2021 00:00:00 +0000</pubDate><guid>https://www.williambuttenham.com/blog/wiiscale-ifttt/</guid><description>https://github.com/williambuttenham/wiiscale-ifttt</description></item><item><title>Foot Pedal Keyboard</title><link>https://www.williambuttenham.com/blog/foot-pedal-keyboard/</link><pubDate>Tue, 24 Nov 2020 00:00:00 +0000</pubDate><guid>https://www.williambuttenham.com/blog/foot-pedal-keyboard/</guid><description>https://github.com/williambuttenham/qmk_firmware/tree/williambuttenham/keyboards/handwired/foot_pedal</description></item><item><title>MIDI Piano controller</title><link>https://www.williambuttenham.com/blog/midi-piano/</link><pubDate>Fri, 21 Feb 2020 00:00:00 +0000</pubDate><guid>https://www.williambuttenham.com/blog/midi-piano/</guid><description>I made this project for my partners work in childcare. She has a classroom of toddlers and while they enjoy the musical toys they have, some of them are not robust enough for long term use. In addition most musical toys are limited to simpler instruments that translate well into a small toy. To make this controller robust I have used standard arcade buttons rated for ten million presses and the case will be constructed from 1/2 inch plywood.</description></item><item><title>3/5 Scale Arcade Cabinet</title><link>https://www.williambuttenham.com/blog/arcade-cabinet/</link><pubDate>Thu, 21 Jun 2018 00:00:00 +0000</pubDate><guid>https://www.williambuttenham.com/blog/arcade-cabinet/</guid><description>https://github.com/williambuttenham/arcade-machine</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on William Buttenham</title>
+    <link>https://www.williambuttenham.com/blog/</link>
+    <description>Recent content in Blogs on William Buttenham</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright © 2023</copyright>
+    <lastBuildDate>Sun, 19 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.williambuttenham.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WiiScale IFTTT</title>
+      <link>https://www.williambuttenham.com/blog/wiiscale-ifttt/</link>
+      <pubDate>Sun, 19 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.williambuttenham.com/blog/wiiscale-ifttt/</guid>
+      <description>https://github.com/williambuttenham/wiiscale-ifttt</description>
+    </item>
+    
+    <item>
+      <title>Foot Pedal Keyboard</title>
+      <link>https://www.williambuttenham.com/blog/foot-pedal-keyboard/</link>
+      <pubDate>Tue, 24 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.williambuttenham.com/blog/foot-pedal-keyboard/</guid>
+      <description>https://github.com/williambuttenham/qmk_firmware/tree/williambuttenham/keyboards/handwired/foot_pedal</description>
+    </item>
+    
+    <item>
+      <title>MIDI Piano controller</title>
+      <link>https://www.williambuttenham.com/blog/midi-piano/</link>
+      <pubDate>Fri, 21 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.williambuttenham.com/blog/midi-piano/</guid>
+      <description>I made this project for my partners work in childcare. She has a classroom of toddlers and while they enjoy the musical toys they have, some of them are not robust enough for long term use. In addition most musical toys are limited to simpler instruments that translate well into a small toy. To make this controller robust I have used standard arcade buttons rated for ten million presses and the case will be constructed from 1/2 inch plywood.</description>
+    </item>
+    
+    <item>
+      <title>3/5 Scale Arcade Cabinet</title>
+      <link>https://www.williambuttenham.com/blog/arcade-cabinet/</link>
+      <pubDate>Thu, 21 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.williambuttenham.com/blog/arcade-cabinet/</guid>
+      <description>https://github.com/williambuttenham/arcade-machine</description>
+    </item>
+    
+  </channel>
+</rss>

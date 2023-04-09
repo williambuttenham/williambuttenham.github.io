@@ -1,5 +1,5 @@
 baseURL = "http://localhost"
-copyright = "Copyright © 2022"
+copyright = "Copyright © 2023"
 title = "William Buttenham"
 #paginate = 10
 enableRobotsTXT = true
@@ -112,22 +112,22 @@ enableRobotsTXT = true
     iconName = "mail"
     formatString = "mailto:?subject={title}&body={url}"
 
-[menu]
-  [[menu.main]]
-    identifier = "blog"
-    name = "Blog"
-    url = "/blog"
-    weight = 10
+#[menu]
+  #[[menu.main]]
+  #  identifier = "blog"
+  #  name = "Blog"
+  #  url = "/blog"
+  #  weight = 10
   # [[menu.main]]
   #   identifier = "projects"
   #   name = "Projects"
   #   url = "/projects"
   #   weight = 20
-  [[menu.main]]
-    identifier = "cv"
-    name = "CV"
-    url = "/cv"
-    weight = 30
+  #[[menu.main]]
+  #  identifier = "cv"
+  #  name = "CV"
+  #  url = "/cv"
+  #  weight = 30
   # [[menu.main]]
   #   identifier = "about"
   #   name = "About"
