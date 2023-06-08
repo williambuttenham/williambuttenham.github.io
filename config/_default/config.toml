@@ -3,11 +3,13 @@ copyright = "Copyright © 2023"
 title = "William Buttenham"
 #paginate = 10
 enableRobotsTXT = true
+# Enable to calculate the last modified date from Git history and show it in the post header
+#enableGitInfo = true
 
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
-      # This settings allows inlining <script> and <style> tags in markdown, 
+      # This setting allows inlining <script> and <style> tags in markdown, 
       # which is useful and required to use Prism plugins, but may be dangerous 
       # if the content isn't trustworthy.
       unsafe = true
@@ -17,7 +19,8 @@ enableRobotsTXT = true
   #quality = 75
 
 [params]
-  # dark or light, defaults to light
+  # dark or light, defaults to light. Local storage and OS preference override this param. For more details see: 
+  # https://github.com/schnerring/hugo-theme-gruvbox/issues/34#issuecomment-1235870375
   #defaultTheme = "light"
   # gray red green yellow blue purple aqua orange, defaults to blue
   #themeColor = "blue"
@@ -51,11 +54,11 @@ enableRobotsTXT = true
     ]
   
   # By default, the theme creates resized versions of images ranging from 300 to
-  # 700 pixels wide in increments of 100 pixels
+  # 700 pixels wide in increments of 200 pixels
   #[params.imageResize]
   #  min = 300
   #  max = 700
-  #  increment = 100
+  #  increment = 200
 
   # Social share links for posts:
   #   - iconSuite: "simple-icon" or "tabler-icon"
