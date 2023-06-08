@@ -1,5 +1,5 @@
 baseURL = "http://localhost"
-copyright = "Copyright © 2023"
+copyright = "© Copyright 2018-2023 William Buttenham"
 title = "William Buttenham"
 #paginate = 10
 enableRobotsTXT = true
