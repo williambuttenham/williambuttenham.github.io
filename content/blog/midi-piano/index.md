@@ -3,9 +3,10 @@ title: "MIDI Piano controller"
 date: "2020-02-21"
 description: "This rugged MIDI piano was built to withstand daily abuse from a classroom of toddlers. It was built with modularity and repairability in mind as well to allow future upgrades like a sustain pedal."
 cover:
-  src: ./front.jpg
-  caption: Keyboard top
+  src: ./feature.jpg
+  caption: Keyboard plate
 ---
+![Working on the keyboard plate](under_construction.jpg "Working on the keyboard plate")
 
  I made this project for my partners work in childcare. She has a classroom of toddlers and while they enjoy the musical toys they have, some of them are not robust enough for long term use. In addition most musical toys are limited to simpler instruments that translate well into a small toy. To make this controller robust I have used standard arcade buttons rated for ten million presses and the case will be constructed from 1/2 inch plywood. The controller is using the QMK firmware to easily implement NKRO and MIDI signals.
 
@@ -20,3 +21,5 @@ cover:
  I have planned to add a seperate multi function pedal to the project using an industrial foot switch and some toggle switches. It will use its own microcotroller running QMK to simplify the setup and allow the two controllers to work as standalone tools.
 
 ![Parts to build a midi pedal controller](pedal_parts.jpg "Pedal parts")
+
+![All my QMK keyboards together](family_portrait.jpg "All my QMK keyboards together")

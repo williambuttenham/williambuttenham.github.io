@@ -2,6 +2,9 @@
 title: "Foot Pedal Keyboard"
 date: "2020-11-24"
 description: "A QMK foot pedal with two stages, able to be used with both MIDI devices and as an extra convenient shortcut"
+cover:
+  src: ./feature.jpg
+  caption: Completed foot pedal with 3D printed case
 ---
 
 I initially wanted to use this foot pedal alongside the [MIDI piano keyboard](../midi-piano)

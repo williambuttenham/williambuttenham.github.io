@@ -2,6 +2,8 @@
 title: "3/5 Scale Arcade Cabinet"
 date: "2018-06-21"
 description: "My arcade cabinet built around a 14\" CRT TV, powered by a Raspberry Pi running Lakka with QMK controls"
+cover:
+  src: ./feature.jpg
 ---
 
 I was inspired to create this by a [similar build](https://tinkerlog.com/2016/10/03/galaga-arcade-cabinet/)

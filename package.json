@@ -82,7 +82,7 @@
   "lint-staged": {
     "*.css": "stylelint --fix --allow-empty-input",
     "*.js": "eslint --cache --fix",
-    "*.md": "markdownlint --fix"
+    "*.md": "markdownlint --fix --disable MD013"
   },
   "main": "index.js",
   "name": "hugo-theme-gruvbox",
@@ -94,7 +94,7 @@
     "lint": "npm run lint:css && npm run lint:js && npm run lint:md",
     "lint:css": "stylelint --fix **/*.css",
     "lint:js": "eslint --fix --ext js .",
-    "lint:md": "markdownlint --fix **/*.md",
+    "lint:md": "markdownlint --fix **/*.md --disable MD013",
     "prepare": "husky install"
   },
   "version": "1.0.0"
