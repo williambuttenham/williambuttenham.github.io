@@ -1,5 +1,3 @@
-//! Source: https://github.com/h-enk/doks/blob/master/assets/js/index.js
-
 import { Document } from "flexsearch";
 
 const search = document.getElementById("search__text");
@@ -30,7 +28,7 @@ document.addEventListener("click", (e) => {
 /*! Source: https://dev.to/shubhamprakash/trap-focus-using-javascript-6a3 */
 document.addEventListener("keydown", (e) => {
   const suggestionsHidden = suggestions.classList.contains(
-    "search__suggestions--hidden"
+    "search__suggestions--hidden",
   );
   if (suggestionsHidden) return;
 
@@ -50,74 +48,71 @@ document.addEventListener("keydown", (e) => {
   } else if (e.key === "ArrowUp") {
     // Focus previous suggestion
     e.preventDefault();
-    nextIndex = currentIndex > 0 ? currentIndex - 1 : 0;
+    const nextIndex = currentIndex > 0 ? currentIndex - 1 : 0;
     focusableSuggestions[nextIndex].focus();
   }
 });
 
-(function () {
-  const index = new Document({
+/*! The FlexSearch implementation is inspired by the Doks theme | MIT license | https://github.com/thuliteio/doks-core/blob/eb9f50cee0eeae5d72f3751951f30cf914144bc0/assets/js/flexsearch.js */
+(async function () {
+  const index = Document({
     tokenize: "forward",
-    cache: 100,
     document: {
       id: "id",
-      store: ["href", "title", "description"],
-      index: ["title", "description", "content"],
+      index: [
+        { field: "title" },
+        { field: "tags" },
+        { field: "content" },
+        {
+          field: "date",
+          tokenize: "strict",
+          encode: false,
+        },
+      ],
+      store: ["title", "summary", "date", "permalink"],
     },
   });
 
-  //! Source: https://discourse.gohugo.io/t/range-length-or-last-element/3803/2
-  {{ $list := (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
-  {{ $len := (len $list) }}
+  // build index
+  const response = await fetch("/search-index.json");
+  const data = await response.json();
+  for (const item of data) {
+    await index.addAsync(item);
+  }
 
-  index.add(
-    {{ range $index, $element := $list }}
-      {
-        id: {{ $index }},
-        href: "{{ .RelPermalink }}",
-        title: {{ .Title | jsonify }},
-        {{ with .Description }}
-          description: {{ . | jsonify }},
-        {{ else }}
-          description: {{ .Summary | plainify | jsonify }},
-        {{ end }}
-        content: {{ .Plain | jsonify }}
-      })
-      {{ if ne (add $index 1) $len }}
-        .add(
-      {{ end }}
-    {{ end }}
-    {{ if eq 0 $len }}
-      )
-    {{ end }}
-  ;
-
-  search.addEventListener("input", function () {
+  search.addEventListener("input", async function () {
+    // Run search
     const maxResultsCount = {{ $.Site.Params.flexsearch.maxResultsCount | default 5 }};
     const searchText = this.value;
-    const searchResults = index.search(searchText, maxResultsCount, { enrich: true });
+    const searchResults = await index.searchAsync({
+      query: searchText,
+      limit: maxResultsCount,
+      enrich: true,
+    });
+
     const searchResultsMap = new Map();
 
-    // Deduplicate search results by href
+    // Deduplicate search results by permalink
     for (const searchResult of searchResults.flatMap((r) => r.result)) {
-      if (searchResultsMap.has(searchResult.href)) continue;
-      searchResultsMap.set(searchResult.doc.href, searchResult.doc);
+      if (searchResultsMap.has(searchResult.permalink)) continue;
+      searchResultsMap.set(searchResult.doc.permalink, searchResult.doc);
     }
 
+    // Display results
     suggestions.innerHTML = "";
     suggestions.classList.remove("search__suggestions--hidden");
 
     if (searchResultsMap.size === 0 && searchText) {
-      const noResultsMessage = document.createElement("div")
-      noResultsMessage.innerHTML = `No results for "<strong>${searchText}</strong>"`
+      const noResultsMessage = document.createElement("div");
+      noResultsMessage.innerHTML = `No results for "<strong>${searchText}</strong>"`;
       noResultsMessage.classList.add("search__no-results");
       suggestions.appendChild(noResultsMessage);
       return;
     }
 
-    for (const [href, searchResult] of searchResultsMap) {
+    for (const [permalink, searchResult] of searchResultsMap) {
       const suggestion = document.createElement("a");
-      suggestion.href = href;
+      suggestion.href = permalink;
       suggestion.classList.add("search__suggestion-item");
       suggestions.appendChild(suggestion);
 
@@ -126,12 +121,14 @@ document.addEventListener("keydown", (e) => {
       title.classList.add("search__suggestion-title");
       suggestion.appendChild(title);
 
-      const description = document.createElement("div");
-      description.textContent = searchResult.description;
-      description.classList.add("search__suggestion-description");
-      suggestion.appendChild(description);
+      const summary = document.createElement("div");
+      summary.innerHTML = searchResult.summary;
+      summary.classList.add("search__suggestion-summary");
+      suggestion.appendChild(summary);
 
       if (suggestions.childElementCount === maxResultsCount) break;
     }
   });
+
+  search.style.visibility = "visible";
 })();

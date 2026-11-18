@@ -1,15 +1,36 @@
-const path = require("path");
+import path from "path";
+import { createRequire } from "module";
+import postcssImport from "postcss-import";
+import postcssUrl from "postcss-url";
+import postcssNesting from "postcss-nesting";
+import postcssCustomMedia from "postcss-custom-media";
+import postcssPresetEnv from "postcss-preset-env";
+import cssnano from "cssnano";
+import purgeCSSPlugin from "@fullhuman/postcss-purgecss";
 
-module.exports = () => ({
+const require = createRequire(import.meta.url);
+
+export default {
   plugins: [
-    require("postcss-import")({
+    postcssImport({
       path: [
         // Check for imports in <theme-dir>/css/assets
         // TODO use Hugo's built-in inlineImports?
-        path.posix.join(__dirname, "assets", "css"),
+        path.posix.join(import.meta.dirname, "assets", "css"),
       ],
+      // Hugo runs PostCSS under Node's permission model. On Windows, the
+      // default resolver's async fs.realpath walks parent directories outside
+      // the site root and fails with ERR_ACCESS_DENIED, so resolve packages
+      // with Node's require.resolve and fall back to the default resolver.
+      resolve: (id, basedir) => {
+        try {
+          return require.resolve(id, { paths: [basedir] });
+        } catch {
+          return id;
+        }
+      },
     }),
-    require("postcss-url")([
+    postcssUrl([
       {
         filter: "**/typeface-*/files/*",
         url: (asset) => {
@@ -19,13 +40,13 @@ module.exports = () => ({
         },
       },
     ]),
-    require("postcss-nesting"),
-    require("postcss-custom-media"),
+    postcssNesting,
+    postcssCustomMedia,
     ...(process.env.HUGO_ENVIRONMENT === "production"
       ? [
-          require("postcss-preset-env"),
-          require("cssnano"),
-          require("@fullhuman/postcss-purgecss")({
+          postcssPresetEnv,
+          cssnano,
+          purgeCSSPlugin({
             content: ["./hugo_stats.json"],
             defaultExtractor: (content) => {
               let els = JSON.parse(content).htmlElements;
@@ -36,4 +57,4 @@ module.exports = () => ({
         ]
       : []),
   ],
-});
+};
