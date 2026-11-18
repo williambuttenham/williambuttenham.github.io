@@ -6,6 +6,15 @@ enableRobotsTXT = true
 # Enable to calculate the last modified date from Git history and show it in the post header
 #enableGitInfo = true
 
+[build]
+  noJSConfigInAssets = true
+  [build.buildStats]
+    # With each build, Hugo writes a hugo_stats.json file that contains arrays
+    # of the class attributes, id attributes, and tags of each HTML element 
+    # within the published site. For production builds, this file is required 
+    # by PurgeCSS to prune unused CSS.
+    enable = true
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
@@ -17,6 +26,16 @@ enableRobotsTXT = true
 [imaging]
   # JPEG and WebP image processing quality, defaults to 75%
   #quality = 75
+
+[outputs]
+  home = ["html", "rss", "searchIndex"]
+
+[outputFormats]
+  [outputFormats.searchIndex]
+    mediaType = "application/json"
+    baseName = "search-index"
+    isPlainText = true
+    notAlternative = true
 
 [params]
   # dark or light, defaults to light. Local storage and OS preference override this param. For more details see: 
@@ -59,6 +78,11 @@ enableRobotsTXT = true
   #  min = 300
   #  max = 700
   #  increment = 200
+  
+  [params.tagCloud]
+    enable = false
+    minFontSizeRem = 0.8
+    maxFontSizeRem = 2.0
 
   # Social share links for posts:
   #   - iconSuite: "simple-icon" or "tabler-icon"
@@ -76,11 +100,11 @@ enableRobotsTXT = true
     formatString = "https://reddit.com/submit?url={url}&title={title}"
   [[params.socialShare]]
     iconSuite = "simple-icon"
-    iconName = "twitter"
-    formatString = "https://twitter.com/intent/tweet?url={url}&text={title}"
+    iconName = "x"
+    formatString = "https://x.com/intent/post?url={url}&text={title}"
   [[params.socialShare]]
-    iconSuite = "simple-icon"
-    iconName = "linkedin"
+    iconSuite = "tabler-icon"
+    iconName = "outline/brand-linkedin"
     formatString = "https://www.linkedin.com/sharing/share-offsite/?url={url}"
   [[params.socialShare]]
     iconSuite = "simple-icon"
@@ -112,7 +136,7 @@ enableRobotsTXT = true
     formatString = "https://telegram.me/share/url?url={url}&text={title}"
   [[params.socialShare]]
     iconSuite = "tabler-icon"
-    iconName = "mail"
+    iconName = "outline/mail"
     formatString = "mailto:?subject={title}&body={url}"
 
 [menu]
@@ -144,7 +168,7 @@ enableRobotsTXT = true
 
 [languages]
   [languages.en]
-    languageName = "English"
+    label = "English"
     weight = 10
     [languages.en.params.jsonResume]
       present = "present"
