@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(hugo:*)",
+      "Bash(npm ci)",
+      "Bash(npm install)",
+      "Bash(npx lint-staged:*)",
+      "Bash(npx markdownlint:*)",
+      "Bash(npx stylelint:*)",
+      "Bash(npx eslint:*)",
+      "Bash(npx prettier:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)"
+    ],
+    "deny": [
+      "Read(./public/**)",
+      "Read(./node_modules/**)",
+      "Read(./resources/_gen/**)",
+      "Read(./package-lock.json)",
+      "Read(./hugo_stats.json)",
+      "Edit(./public/**)"
+    ]
+  }
+}
